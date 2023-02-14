@@ -1,9 +1,9 @@
 /* make a histogram for length of words in input */
 #include <stdio.h>
 
-#define MAX_SIZE 15
+#define MAX_SIZE 16
 
-main() {
+main() {	
 	int c;
 	int length = 0;	
 	int max = 0;	
@@ -19,7 +19,8 @@ main() {
 				max = word_length[length];
 			length = 0;
 		} else {
-			length++;
+			if (length < MAX_SIZE - 1)
+				length++;
 		}
 	}
 	/* make sure last word gets added */
@@ -42,11 +43,11 @@ main() {
 	for (int i = 2; i < MAX_SIZE; i++) {
 		printf("%3d", i);
 	}
-	printf("\n");
+	printf("+\n");
 	
 	/* code block below replaced with histogram function	
 	printf("Number of times words of various lengths displayed:\n");
-	for (int i = 1; i < 15; i++) 
+	for (int i = 1; i < MAX_SIZE; i++) 
 		printf("%2d: %3d\n", i, word_length[i]);
 	*/
 }
