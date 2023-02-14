@@ -1,8 +1,10 @@
 #include <stdio.h>
 
+#define FAH 212
+
 main() {
 	double fah_to_cel();
-	printf("%2.1fC\n", fah_to_cel(40));
+	printf("%2.1fC\n", fah_to_cel(FAH));
 }
 
 double fah_to_cel(int f) {
