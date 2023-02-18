@@ -1,0 +1,11 @@
+[?1049h[>4;2m[?1h=[?2004h[?1004h[1;39r[?12h[?12l[22;2t[22;1t[27m[29m[m[H[2J[?25l[39;1H"char_freq_histogram.c" 40L, 688B[1;1H#include <stdio.h>
+
+/* Creates histogram displaying frequency of lowercase letters used in input */
+
+main() {[6;9Hint lowercase[26];[7;9Hint i, c, max;[8;9Hmax = 0;[10;9Hfor (i = 0; i < 26; i++)[11;17Hlowercase[i] = 0;[13;9Hwhile ((c = getchar()) != EOF) {[14;17Hif (c >= 'a' && c <= 'z') {[15;25Hlowercase[c - 'a']++;[16;25Hif (lowercase[c - 'a'] > max)[17;33Hmax = lowercase[c - 'a'];[18;17H}[19;9H}[21;9Hfor (i = max; i > 0; i--) {[22;17Hfor (int j = 0; j < 26; j++) {[23;25Hif (lowercase[j] >= i){[24;33Hprintf("* ");[25;25H} else {[26;33Hprintf("  ");[27;25H}[28;17H}[29;17Hprintf("\n");[30;9H}[32;9Hchar alphabet[26];[33;9Hfor (i = 0; i < 26; i++) {[34;17Halphabet[i] = 'a' + i;[35;9H}[36;9Hfor (i = 0; i < 26; i++) {[37;17Hprintf("%c ", alphabet[i]);[38;9H}[1;1H[?25h
+
+[?25l[39;1H[K[39;1H:[?25h[?25l[39;1H[K[3;1H[?25h/[2;1H[?25l[39;1H[1m-- INSERT --[2;1H[?25h[?25l[ms[?25h[?25lj[?25h[?25ld[?25h[?25lf[?25h[?25lj[?25h[?25lt[?25h[?25lh[?25h[?25li[?25h[?25ls[?25h[?25l [?25h[?25lT[?25h[?25lh[?25h[?25la[?25h[?25ll[?25h[?25lk[?25h[?25lj[?25h[?25ls[?25h[?25ld[?25h[?25lf[?25h[?25l[2;19H[K[2;19H[?25h[?25l[39;1H[K[2;18H[?25h[?25l[39;1HType  :qa!  and press <Enter> to abandon all changes and exit Vim[2;18H[?25h
+[?25l[39;1H[K[39;1H:[?25hxxz[?25l[39;1H[K[3;1H[?25h[39;1H[?1004l[?2004l[?1l>[>4;m[?1049lVim: Caught deadly signal HUP
+Vim: preserving files...
+Vim: Finished.
+[39;1H[23;2t[23;1t

@@ -12,7 +12,7 @@ main() {
 	for (int i = 0; i < MAX_SIZE; i++)
 		word_length[i] = 0;
 
-	while ((c = getchar()) != 'A'){
+	while ((c = getchar()) != EOF){
 		if (c == ' ' || c == '\n' || c == '\t'){
 			word_length[length]++;
 			if (word_length[length] > max)

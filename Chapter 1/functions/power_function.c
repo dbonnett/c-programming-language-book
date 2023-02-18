@@ -9,12 +9,15 @@ main() {
 }
 
 int power(int base, int n) {
-	int i, p;
-
-	p = 1;
-	for (i = 1; i <= n; i++) {
-		p = p * base;
-	}
-	return p;
+	/* result will store each iteration of multiplication 
+	 * to be returned when done */
+	int result = 1;
+	
+	/* the while loop will run n times, each time 
+	 * multiplying another base to the result */
+	while (n > 0) {
+		result *= base;
+		n--;
+	}	
+	return result;
 }
-

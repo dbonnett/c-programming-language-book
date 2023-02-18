@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+/* Creates histogram displaying frequency of lowercase letters used in input */
+
 main() {
 	int lowercase[26];
 	int i, c, max;
@@ -8,7 +10,7 @@ main() {
 	for (i = 0; i < 26; i++)
 		lowercase[i] = 0;
 
-	while ((c = getchar()) != 'A') {
+	while ((c = getchar()) != EOF) {
 		if (c >= 'a' && c <= 'z') {
 			lowercase[c - 'a']++;
 			if (lowercase[c - 'a'] > max)
