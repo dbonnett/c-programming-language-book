@@ -20,7 +20,17 @@ int main() {
 			} else if (c == '/') {
 				halfState = HALF;
 			}
-			putchar(c);
+
+			if (c == '/') {
+			       if ((c = getchar()) == '*') {
+				state = IN;
+			       } else {
+				putchar('/');
+				putchar(c);
+			       }
+			} else {
+				putchar(c);
+			}
 
 		} else { 
 			if (halfState == HALF) {
