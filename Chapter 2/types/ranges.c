@@ -3,14 +3,16 @@
 
 int main() {
 	int numOfChars();
-	int numOfInts();
+	long int numOfInts();
+	int numOfShorts();
 	printf("num of chars: %d\n", numOfChars());	
-	printf("num of ints: %d\n", numOfInts());
+	printf("num of ints: %ld\n", numOfInts());
+	printf("num of shorts: %d\n", numOfShorts());
 }
 
-int numOfInts(void) {
-	char i = 0;
-	int numOfI = 1;
+long int numOfInts(void) {
+	int i = 0;
+	long int numOfI = 1;
 
 	while (++i != 0)
 		numOfI++;
@@ -23,6 +25,16 @@ int numOfChars(void) {
 	int numOfI = 1;
 
 	while (++i != 'a')
+		numOfI++;
+
+	return numOfI;
+}
+
+int numOfShorts() {	
+	short i = 0;
+	int numOfI = 1;
+
+	while (++i != 0) 
 		numOfI++;
 
 	return numOfI;
