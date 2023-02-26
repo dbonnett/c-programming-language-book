@@ -10,28 +10,39 @@
 #define MAX_LEN 100
 
 char queue[MAX_LEN];
-int ind = 0;
+int ind;
 
 int main() {
 	int c;
+	extern int ind;
+	ind = 0;
+	extern char queue[];
 	char pop();
 	void push(char);
 
+	putchar(pop());
+	push('a');
+	printf("%c", pop());
+
+	/*
 	while ((c = getchar()) != EOF) {
 		if (c == 40 || c == 123 || c == 91)
 			push(c);
 		printf("%c", pop());
 	}
+	printf("%c", pop());
+	*/
 }
 
 char pop() {
 	if (ind > 0) {
-		ind--;
+		ind = ind - 1;
 		return queue[ind + 1];
 	}
-	return '\0';
+	return 'a';
 }
 
 void push(char c) {
 	queue[ind] = c;
+	ind = ind + 1;
 }
