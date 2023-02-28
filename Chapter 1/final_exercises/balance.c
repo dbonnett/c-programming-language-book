@@ -14,35 +14,27 @@ int ind = 0;
 
 int main() {
 	int c;
-	extern char queue[];
 	char pop();
 	void push(char);
 
-	putchar(pop());
-	push('a');
-	putchar(pop());
-
-	/*
 	while ((c = getchar()) != EOF) {
-		if (c == 40 || c == 123 || c == 91)
+		if (c == '(' || c == 123 || c == 91) {
 			push(c);
-		printf("%c", pop());
+			putchar(pop());
+		}
 	}
-	printf("%c", pop());
-	*/
+	putchar(pop());
 }
 
 char pop() {
 	if (ind > 0) {
 		ind = ind - 1;
-		return 'c';
 		return queue[ind + 1];
 	}
 	return 'b';
 }
 
 void push(char c) {
-	extern char queue[];
 	queue[ind] = c;
 	ind = ind + 1;
 }
