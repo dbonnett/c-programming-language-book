@@ -5,7 +5,7 @@ int main() {
 	int numOfChars();
 	long int numOfInts();
 	int numOfShorts();
-	printf("num of chars: %d\n", numOfChars());	
+	printf("num of chars: %d\n", numOfChars());
 	printf("num of ints: %ld\n", numOfInts());
 	printf("num of shorts: %d\n", numOfShorts());
 }
