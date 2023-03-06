@@ -7,6 +7,8 @@ int main() {
 	char s1[] = "hellotherebruva";
 	char s2[] = "watermelon";
 	void squeeze(char[], char[]);
+	squeeze(s1, s2);
+	printf("%s\n", s1);
 	return 0;
 }
 
@@ -14,8 +16,8 @@ void squeeze(char s[], char t[]) {
 	int contains(char[], char);
 	for (int i = 0; i < LEN1; i++) {
 		if (contains(t, s[i])) {
-			for (int j = i+1; i < LEN1-1; j++)
-				s[i++] = s[j];
+			for (int j = i+1; j < LEN1-1; j++)
+				s[j] = s[j+1];
 		}
 	}
 }
