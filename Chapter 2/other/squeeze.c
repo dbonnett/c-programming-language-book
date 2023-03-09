@@ -16,7 +16,7 @@ void squeeze(char s[], char t[]) {
 	int contains(char[], char);
 	for (int i = 0; i < LEN1; i++) {
 		if (contains(t, s[i])) {
-			for (int j = i+1; j < LEN1-1; j++)
+			for (int j = i; j < LEN1-1; j++)
 				s[j] = s[j+1];
 		}
 	}
