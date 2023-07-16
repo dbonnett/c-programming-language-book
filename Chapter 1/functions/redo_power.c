@@ -1,18 +1,21 @@
 #include <stdio.h>
 
 int main() {
-	int base = 5;
-	int exp = 4;
-	int power(int a,int x);
-	printf("%d ^ %d = %d\n", base, exp, power(base, exp));
+	int x, y;
+	printf("Base: ");
+	scanf("%d", &x);
+	printf("Power: ");
+	scanf("%d", &y);
+	long power(int a, int b);
+	printf("%d ^ %d = %ld\n", x, y, power(x,y));
 	return 0;
 }
 
-int power(int a, int x) {
-	int base = a;
-	while(x > 1) {
-		a *= base;
-		x--;
+long power(int a, int b) {
+	long aHold = a;
+	while (b > 1) {
+		aHold *= a;
+		b--;
 	}
-	return a;
+	return aHold;
 }
